@@ -11,7 +11,7 @@ type FavArtist struct {
 	ImageURL string `json:"image_url"`
 }
 
-var favFile = "../data/favorites.json"
+var favFile = "data/favorites.json"
 
 func LoadFavorites() ([]FavArtist, error) {
 	b, err := os.ReadFile(favFile)
@@ -55,7 +55,7 @@ func AddFavorite(a FavArtist) error {
 
 	for _, it := range items {
 		if it.ID == a.ID {
-			return nil 
+			return nil
 		}
 	}
 

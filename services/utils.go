@@ -12,7 +12,6 @@ func SearchLocal(artists []SimpleArtist, q string) []SimpleArtist {
 	}
 
 	out := []SimpleArtist{}
-	// On parcours tous les artistes pour trouver ceux qui matchent
 	for _, a := range artists {
 		name := strings.ToLower(a.Name)
 
@@ -36,7 +35,7 @@ func FilterLocal(artists []SimpleArtist, genre string, minPop int, hasImage bool
 	for _, a := range artists {
 		// filtre 1 : genre 
 		if genre != "" {
-			// Faire le filtre genre plus tard si j'ai le temps
+			// Faire le filtre plus tard si j'ai le temps
 		}
 
 		// filtre 2 : popularité
